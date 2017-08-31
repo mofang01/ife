@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color: red;
+			color: #fff;
+			float: left;
+			padding-right: 8px;
+			padding-left: 8px;
+			list-style-type: none;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input id="in_val" type="text">
+	<button id="btn_lr">左侧入</button>
+	<button id="btn_rr">右侧入</button>
+	<button id="btn_lc">左侧出</button>
+	<button id="btn_rc">右侧出</button>
+
+	<ul id="uls">
+		
+	</ul>
+</body>
+</html>
+
+<script>
+	var btnone = document.getElementById("btn_lr");
+	var btntwo = document.getElementById("btn_rr"); 
+	var btnthree = document.getElementById("btn_lc"); 
+	var btnfour = document.getElementById("btn_rc"); 
+	var uls = document.getElementById("uls");
+	var left = "left";
+	var right = "right";
+
+	function enter(direction){
+		var val = document.getElementById("in_val").value;
+		if(val){
+			if(direction == "left"){
+				var lis = document.createElement("li");
+				lis.innerHTML = val;
+				uls.prepend(lis);
+			}
+			else if(direction == "right"){
+				var lis = document.createElement("li");
+				lis.innerHTML = val;
+				uls.append(lis);
+			}
+		}else{
+			alert("请输入值！");
+		}
+	}
+
+
+	function del(direction){
+		var lis = uls.children;
+		if(lis){
+			if(direction == "left"){
+				uls.removeChild(lis[0]);
+			}else{
+				uls.removeChild(lis[lis.length-1]);
+			}
+		}else{
+			alert("请输入值！");
+		}
+	}
+
+	btnone.onclick = function(){enter(left)};
+
+	// btnone.onclick = function(){
+	// 	var val = document.getElementById("in_val").value;
+	// 	if(val){
+	// 		var lis = document.createElement("li");
+	// 		lis.innerHTML = val;
+	// 		uls.prepend(lis);
+	// 	}else{
+	// 		alert("请输入值！");
+	// 	}
+	// };
+
+	btntwo.onclick = function(){enter(right)};
+
+	btnthree.onclick = function(){del(left)};
+
+	// btnthree.onclick = function(){
+	// 	var lis = uls.children;
+	// 	// console.log(lis);
+	// 	if(lis){
+	// 		uls.removeChild(lis[0]);
+	// 	}else{
+	// 		alert("无元素可删除！");
+	// 	}
+	// };
+	btnfour.onclick = function(){del(right)};
+
+	uls.onclick = function(){
+		var lis = uls.children;
+		for(var i = 0; i<lis.length; i++){
+			lis[i].index = i;
+			lis[i].onclick = function(){
+				uls.removeChild(lis[this.index]);
+			}
+		}
+	}
+
+</script>

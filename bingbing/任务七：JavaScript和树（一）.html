@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+
+		#show{
+			width: 50%;
+			height: 150px;
+			position: relative;
+			top: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 70px;
+		}
+
+		div{
+			width: 40%;
+			height: 80%;
+			border: 2px solid #000;
+			border-radius: 3px;
+			background-color: #fff;
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		button{
+			width: 70px;
+			height: 50px;
+			line-height: 45px;
+			text-align: center;
+			border-radius: 20px;
+			border: 2px solid #000;
+			background-color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			outline: none;
+		}
+
+		#before{
+			margin-left: 42%;
+		}
+
+		button:hover{
+			background-color: #b0e11e;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="show">
+
+
+
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+
+
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<button id="before">前序</button>
+	<button id="middle">中序</button>
+	<button id="behine">后序</button>
+</body>
+</html>
+
+<script>
+window.onload = function(){
+	var show = document.getElementById("show");
+	var btn_bef = document.getElementById("before");
+	var btn_mid = document.getElementById("middle");
+	var btn_beh = document.getElementById("behine");
+
+	var rankarr = [];
+	var bool = false;
+	var previous;
+
+	//按下按钮每次初始化
+	function initialize(){
+		rankarr = [];
+		if(previous){
+			previous.style.backgroundColor = "#fff";
+		}
+	}
+
+	//显示遍历效果
+	function showerg(){
+		for(var i = 0; i< rankarr.length; i++){
+			setTimeout(function(i){
+				return function(){
+					if(i == rankarr.length){
+						bool = false;
+					}
+					if(previous){
+						previous.style.backgroundColor = "#fff";
+					}
+					rankarr[i].style.backgroundColor = "#b0e11e";
+					previous = rankarr[i];
+				}
+			}(i),i*500);
+		}
+	}
+
+
+	//前序遍历
+	function befoerg(node){
+		if(node){
+			rankarr.push(node);
+			befoerg(node.firstElementChild);
+			befoerg(node.lastElementChild);
+		}
+	}
+
+
+    //中序遍历
+	function centerg(node){
+		  if (node) {
+		    centerg(node.firstElementChild);
+		    rankarr.push(node);
+		    centerg(node.lastElementChild)
+		  }
+		}
+
+
+		//.后序遍历
+	function behierg(node){
+		  if (node) {
+		    behierg(node.firstElementChild);
+		    behierg(node.lastElementChild)
+		    rankarr.push(node);
+		  }
+		}
+
+
+
+	btn_bef.onclick = function(e){
+		e.preventDefault();
+		if(!bool){
+			bool = true;
+			initialize();
+		    befoerg(show);
+		    showerg();
+		}
+	}
+
+	btn_mid.onclick = function(e){
+		    e.preventDefault();
+		    if (!bool) {
+		      boole = true;
+		      initialize();
+		      centerg(show);
+		      showerg();
+		    }
+		  }
+		
+
+
+	btn_beh.onclick = function(e){
+		    e.preventDefault();
+		    if (!bool) {
+		      boole = true;
+		      initialize();
+		      behierg(show);
+		      showerg();
+		    }
+		  }
+		
+
+}
+	
+</script>
