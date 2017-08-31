@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 1280px;
+			margin: 0 auto;
+		}
+
+		.header{
+			min-width: 700px;
+			height: 56px;
+			background-color: #2189bf;
+			border: 1px solid #2189bf;
+		}
+
+		.header .one{
+			display: inline-block;
+			width: 38px;
+			height: 38px;
+			background-color: #fff;
+			margin-top: 9px;
+			margin-left: 50px;
+			position: relative;
+		}
+
+		.header .one .small{
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			bottom: -3px;
+			right: -3px;
+			border: 3px solid #2189bf;
+		}
+
+		.header .two{
+			float: right;
+			width: 393px;
+			height: 56px;
+			position: relative;
+			margin-right: 91px;
+		}
+
+		.header .two input{
+			width: 314px;
+			height: 29px;
+			border-radius: 20px;
+			border: none;
+			margin-top: 13px;
+			background-image: url("PSD/images02/1.png");
+			background-repeat: no-repeat;
+			background-position: 19px 7px;
+			box-sizing: border-box;
+			padding-left: 40px;
+			margin-right: 20px;
+		}
+
+		.header .two a{
+			width: 50px;
+			height: 56px;
+			line-height: 56px;
+			color: #fff;
+			font-size: 12px;
+			text-decoration: none;
+			background-image: url("PSD/images02/2.png");
+			background-repeat: no-repeat;
+			box-sizing: border-box;
+			padding-left: 20px;
+		}
+
+		.box .left{
+			float: left;
+			width: 260px;
+			height: 1210px;
+			background-color: #2a2e3d;
+			box-sizing: border-box;
+			border: 1px solid #2a2e3d;
+		}
+
+		.box .left .curcle{
+			display: inline-block;
+			width: 58px;
+			height: 58px;
+			border-radius: 50%;
+			border: 2px solid #bababe;
+			margin-top: 18px;
+			margin-left: 42px;
+			position: relative;
+		}
+
+		.box .left .curcle .smallcu{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #bababe;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -25px;
+			margin-top: -25px;
+		}
+
+		.box .left .ab{
+			float: right;
+			margin-right: 59px;
+			margin-top: 39px;
+			color: #f6f5f5;
+			font-size: 16px;
+		}
+
+		.box .left .onep , .box .left .twop{
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			color: #657589;
+			font-size: 16px;
+			margin-top: 23px;
+		}
+
+		.box .left .onep{
+			padding-left: 62px;
+			border-right: 3px solid #323747;
+		}
+
+		.box .left .twop{
+			padding-left: 30px;
+		}
+
+		.box .left .uls{
+			width: 100%;
+			box-sizing: border-box;
+			margin-top: 97px;
+		}
+
+		.box .left .uls li{
+			list-style-type: none;
+			width: 100%;
+			color: #657589;
+			font-size: 12px;
+			line-height: 40px;
+			box-sizing: border-box;
+			padding-left: 70px;
+		}
+
+		.box .left .uls .lis{
+			background-image: url("PSD/images02/4.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+			background-color: #383d4e;
+			color: #ededf0;
+		}
+
+		.box .left .uls .two{
+			background-image: url("PSD/images02/8.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+		}
+
+		.box .left .uls .three{
+			background-image: url("PSD/images02/9.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+		}
+
+		.box .left .uls .four{
+			background-image: url("PSD/images02/8.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+		}
+
+		.box .left .uls .five{
+			background-image: url("PSD/images02/8.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+		}
+
+		.box .left .uls .six{
+			background-image: url("PSD/images02/10.png");
+			background-repeat: no-repeat;
+			background-position: 44px 14px;
+		}
+
+		.box .left .uls .lis ul{
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.box .left .uls .lis li{
+			width: 100%;
+			line-height: 35px;
+			font-size: 12px;
+			color: #657589;
+			box-sizing: border-box;
+			padding: 0;
+			position: relative;
+		}
+
+		.box .left .uls .lis ul .one img{
+			position: absolute;
+			top: 11px;
+			left: 20px;
+		}
+
+		.box .left .uls .lis ul .one li{
+			list-style-type: none;
+			box-sizing: border-box;
+			padding-left: 56px; 
+		}
+
+		.box .left .uls .lis ul .one li img{
+			left: 39px;
+		}
+
+
+
+
+		.box .right{
+			float: left;
+			width: 1020px;
+			height: 1210px;
+			background-color: #eeeeed;
+			box-sizing: border-box;
+			padding-left: 62px;
+			padding-top: 50px;
+			border: 1px solid #eeeeed;
+			position: relative;
+		}
+
+		.box .right .top{
+			width: 100%;
+			height: 32px;
+			background-color: #fff;
+			position: absolute;
+			left: 0;
+			top: 0;
+			box-sizing: border-box;
+			padding-left: 28px;
+		}
+
+		.box .right .top span{
+			display: inline-block;
+			line-height: 32px;
+			color: #aaa;
+			font-size: 12px;
+			margin-right: 5px;
+		}
+
+		.box .right .top .current{
+			color: #6898c2;
+		}
+
+		.box .right .one{
+			width: 888px;
+			height: 84px;
+			background-color: #fff;
+			position: relative;
+			margin-bottom: 11px;
+		}
+
+		.box .right .one .boxone{
+			display: inline-block;
+			width: 730px;
+			height: 84px;
+			box-sizing: border-box;
+			border: 1px solid #fff;
+			padding-left: 30px;
+			background-image: url("PSD/images02/3.png");
+			background-repeat: no-repeat;
+			background-position: 358px 24px;
+		}
+
+		.box .right .one .boxone p:nth-child(1){
+			color: #aaa;
+			font-size: 12px;
+			margin-top: 15px;
+		}
+
+		.box .right .one .boxone p:nth-child(2){
+			color: #aaa;
+			font-size: 12px;
+			margin-top: 6px;
+		}
+
+		.box .right .one a{
+			display: block;
+			float: right;
+			width: 50px;
+			height: 26px;
+			text-align: center;
+			line-height: 26px;
+			color: #fff;
+			font-size: 12px;
+			text-decoration: none;
+			background-color: #388ac1;
+			position: absolute;
+			top: 32px;
+			right: 82px;
+		}
+
+		.box .right .one .boxone input{
+			box-sizing: border-box;
+			padding-left: 10px;
+			width: 120px;
+			height: 25px;
+			margin-left: 14px;
+			margin-right: 15px;
+		}
+
+		.box .right .one .boxone select{
+			box-sizing: border-box;
+			padding-left: 5px;
+			height: 25px;
+			margin-left: 14px;
+		}
+
+		.box .right .one .boxone .pone select:nth-child(1){
+			margin-right: 37px;
+			width: 70px;
+		}
+
+		.box .right .one .boxone .pone select:nth-child(2){
+			margin-right: 60px;
+			width: 120px;
+		}
+
+		.box .right .one .boxone .pone select:nth-child(3){
+			width: 70px;
+		}
+
+		.box .right .one .boxone .ptwo{
+			box-sizing: border-box;
+			padding-left: 164px;
+		}
+
+		.box .right .one .boxone .ptwo select:nth-child(1){
+			width: 120px;
+			margin-right: 60px;
+		}
+
+		.box .right .one .boxone .ptwo select:nth-child(2){
+			width: 70px;
+			margin-right: 13px;
+		}
+
+		.box .right .one .boxone .ptwo select:nth-child(3){
+			width: 120px;
+		}
+
+
+		.box .right .two{
+			width: 888px;
+			height: 65px;
+			box-sizing: border-box;
+			margin-bottom: 22px;
+		}
+
+		.box .right .two div{
+			float: left;
+			margin-right: 6px;
+			background-color: #fff;
+			box-sizing: border-box;
+			border-left: 1px solid #cacdd0;
+			border-top: 1px solid #cacdd0;
+		}
+
+
+		.box .right .two div:last-child{
+			margin-right: 0;
+		}
+
+		.box .right .two .dir{
+			width: 30px;
+			height: 65px;
+			color: #c8c8c8;
+			font-size: 20px;
+			text-align: center;
+			line-height: 65px;
+			cursor: pointer;
+		}
+
+		.box .right .two .time{
+			width: 110px;
+			height: 65px;
+			padding-top: 10px;
+		}
+
+		.box .right .two .time p{
+			width: 100%;
+			text-align: center;
+		}
+
+		.box .right .two .time p:last-child{
+			color: #aeaeae;
+		}
+
+		.box .right .two .his{
+			width: 120px;
+			height: 65px;
+			padding-left: 60px;
+			background-image: url("PSD/images02/5.png");
+			background-repeat: no-repeat;
+			background-position: 20px 15px;
+		}
+
+		.box .right .two .his a{
+			height: 65px;
+			line-height: 65px;
+			font-size: 12px;
+			color: #535353;
+			text-decoration: none;
+		}
+
+		.box .right .three{
+			width: 888px;
+			height: 90px;
+		}
+
+		.box .right .three .pp{
+			width: 100%;
+			height: 18px;
+			font-size: 12px;
+			color: #323333;
+		}
+
+		.box .right .three .mbox{
+			width: 199px;
+			height: 72px;
+			background-color: #fff;
+			float: left;
+			margin-right: 30px;
+			box-sizing: border-box;
+			padding-top: 15px;
+			position: relative;
+			box-shadow: 0 0 5px #cacdd0;
+		}
+
+		.box .right .three .tes{
+			margin-right: 0;
+		}
+
+		.box .right .three .mbox div{
+			width: 60px;
+			height: 47px;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+		}
+
+		.box .right .three .mbox p{
+			width: 100%;
+			padding-left: 10px;
+		}
+
+		.box .right .three .mbox p:first-child{
+			color: #323333;
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+
+		.box .right .three .mbox p:nth-child(2){
+			color: #aaaaaa;
+			font-size: 10px;
+		}
+
+
+		.box .right .four{
+			width: 888px;
+			height: 358px;
+			margin-top: 13px;
+			box-sizing: border-box;
+		}
+
+		.box .right .four .leftbox{
+			float: left;
+			width: 530px;
+			height: 358px;
+			background-color: #fff;
+			box-shadow: 0 0 5px #cacdd0;
+			margin-right: 10px;
+			border-radius: 10px;
+		}
+
+		.box .right .four .rightbox{
+			float: left;
+			width: 348px;
+			height: 358px;
+			background-color: #fff;
+			box-shadow: 0 0 5px #cacdd0;
+			border-radius: 10px;
+		}
+
+		.box .right .four .pone{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;
+			color: #aaa;
+			padding-left: 20px;
+			background-color: #f4f5f6;
+			box-sizing: border-box;
+			border-bottom: 2px solid #e7e9eb;
+		}
+
+		.box .right .four .leftbox .onbox{
+			margin-top: 40px;
+			margin-left: 20px;
+			width: 488px;
+			height: 250px;
+			border: 2px solid #cbcbcb;
+			box-sizing: border-box;
+			border-radius: 3px;
+			position: relative;
+			box-sizing: border-box;
+			padding-left: 36px;
+			padding-top: 29px;
+		}
+
+		.box .right .four .leftbox ul{
+			width: 440px;
+			height: 28px;
+			position: absolute;
+			left: -6px;
+			top: -28px;
+		}
+
+		.box .right .four .leftbox ul li{
+			list-style-type: none;
+			float: left;
+			width: 84px;
+			height: 28px;
+			text-align: center;
+			line-height: 28px;
+			font-size: 12px;
+			color: #535353;
+			border-radius: 1px;
+			background-color: #ededf0;
+			margin-left: 4px;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+
+		.box .right .four .leftbox ul .current{
+			background-color: #fff;
+			border-left: 2px solid #cbcbcb;
+			border-top: 2px solid #cbcbcb;
+			border-right: 2px solid #cbcbcb;
+		}
+
+		.box .right .four .leftbox table{
+			border-collapse: collapse;
+		}
+
+		.box .right .four .leftbox table td{
+			width: 100px;
+			height: 29px;
+			box-sizing: border-box;
+			text-align: center;
+			line-height: 29px;
+			font-size: 12px;
+			color: #999dae;
+			border: 1px solid #e1e1e2;
+		}
+
+		.box .right .four .rightbox .ptwo{
+			box-sizing: border-box; 
+			padding-left: 16px; 
+			margin-bottom: 8px;
+			margin-left: 33px;
+			margin-right: 35px;
+		}
+
+		.box .right .four .rightbox .pthree{
+			float: left;
+			width: 95px;
+			box-sizing: border-box;
+			padding-left: 16px;
+			padding-top: 5px;
+			padding-bottom: 9px;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			margin-left: 35px;
+		}
+
+		.box .right .four .rightbox .pfour{
+			float: left;
+			width: 185px;
+			box-sizing: border-box;
+			padding-left: 16px;
+			padding-top: 5px;
+			padding-bottom: 9px;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.box .right .four .rightbox .pfour .sp{
+			display: inline-block;
+			width: 36px;
+			height: 1px;
+			background-color: #ddd;
+			position: absolute;
+			bottom: -1px;
+			right: -34px;
+		}
+
+		.box .right .four .rightbox .pfive{
+			width: 280px;
+			height: 120px;
+			border-bottom: 1px solid #ddd;
+			margin-left: 36px;
+		}
+
+		.box .right .four .rightbox .psix{
+			margin-left: 36px;
+			font-size: 12px;
+			color: #c3c2c2;
+			margin-top: 10px;
+			box-sizing: border-box;
+			border: 1px solid #fff;
+			box-sizing: border-box;
+			padding-left: 16px;
+			position: relative;
+		}
+
+		.box .right .four .rightbox .psix input{
+			position: absolute;
+			left: 0;
+			top: 6px;
+		}
+
+		.box .right .four .rightbox .psix a{
+			display: inline-block;
+			width: 50px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+			font-size: 12px;
+			background-color: #388ac1;
+			margin-left: 138px;
+			border-radius: 2px;
+		}
+
+
+
+		.box .right .five{
+			width: 888px;
+			height: 358px;
+			margin-top: 13px;
+			box-sizing: border-box;
+		}
+
+		.box .right .five .leftbox{
+			float: left;
+			width: 530px;
+			height: 358px;
+			background-color: #fff;
+			box-shadow: 0 0 5px #cacdd0;
+			border-radius: 10px;
+		}
+
+		.box .right .five .rightbox{
+			float: left;
+			width: 348px;
+			height: 358px;
+			background-color: #fff;
+			box-shadow: 0 0 5px #cacdd0;
+			border-radius: 10px;
+			margin-right: 10px;
+		}
+
+		.box .right .five .pone{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;
+			color: #aaa;
+			padding-left: 20px;
+			background-color: #f4f5f6;
+			box-sizing: border-box;
+			border-bottom: 2px solid #e7e9eb;
+		}
+
+		.box .right .five .leftbox table{
+			margin-top: 18px;
+			margin-left: 40px;
+			border-collapse: collapse;
+		}
+
+		.box .right .five .leftbox table .checked{
+			background-color: #f4f6f7;
+		}
+
+		.box .right .five .leftbox table td{
+			background-color: #fff;
+			border: 1px solid #e7e9eb;
+			font-size: 12px;
+			color: #323333;
+		}
+
+		.box .right .five .leftbox table .check:hover td{
+			background-color: #f4f5f7;
+			cursor: pointer;
+		}
+
+		.box .right .five .leftbox table .one{
+			width: 68px;
+			height: 28px;
+			text-align: center;
+			line-height: 28px;
+		}
+
+		.box .right .five .leftbox table .two{
+			width: 90px;
+			height: 28px;
+			line-height: 28px;
+			text-align: center;
+		}
+
+		.box .right .five .leftbox table .three{
+			width: 290px;
+			height: 28px;
+			line-height: 28px;
+			box-sizing: border-box;
+			padding-left: 34px;
+			position: relative;
+		}
+
+		.box .right .five .leftbox table .three p{
+			width: 167px;
+			height: 4px;
+			background-color: #dcdcdc;
+			position: absolute;
+			top: 12px;
+			left: 104px;
+		}
+
+		.box .right .five .leftbox table .three p span{
+			height: 4px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.box .right .five .rightbox .sel{
+			width: 308px;
+			height: 32px;
+			margin-left: 22px;
+			margin-top: 10px;
+			border-bottom: 2px solid #a9cfec;
+		}
+
+		.box .right .five .rightbox .sel select.one{
+			width: 65px;
+			height: 20px;
+		}
+
+		.box .right .five .rightbox .sel select.two{
+			width: 84px;
+			height: 20px;
+			box-sizing: border-box;
+			padding-left: 24px;
+		}
+
+		.box .right .five .rightbox .sel select.three{
+			width: 85px;
+			height: 20px;
+		}
+
+		.box .right .five .rightbox .sel a{
+			float: right;
+			font-size: 12px;
+			color: #535353;
+			line-height: 20px;
+			display: inline-block;
+			color: #000;
+			text-decoration: none;
+			width: 58px;
+			height: 20px;
+			text-align: center;
+			border: 1px solid #cacbcb;
+		}
+
+		.box .right .five .rightbox table{
+			margin-left: 22px;
+			width: 308px;
+			border-collapse: none;collapse
+		}
+
+		.box .right .five .rightbox table thead{
+			border-collapse: collapse;
+		}
+
+		.box .right .five .rightbox table thead td{
+			width: 40px;
+			height: 32px;
+			font-size: 12px;
+			color: #535353;
+			text-align: center;
+			line-height: 32px;
+			border-bottom: 1px solid #e1e1e2;
+			position: relative;
+		}
+
+		.box .right .five .rightbox table thead td p{
+			width: 4px;
+			height: 1px;
+			background-color: #e1e1e2;
+			position: absolute;
+			bottom: -1px;
+			right: -3px;
+		}
+
+		.box .right .five .rightbox table tbody td{
+			width: 40px;
+			height: 45px;
+			font-size: 11px;
+			box-sizing: border-box;
+			margin-top: 2px;
+		}
+
+		.box .right .five .rightbox table tbody td p{
+			width: 100%;
+			text-align: center;
+			color: 323333
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="one">
+			<div class="small"></div>
+		</div>
+		<div class="two">
+			<input type="text">
+			<a href="javascript:;">登录</a>
+		</div>
+	</div>
+
+
+<div class="box">
+	<div class="left">
+		<div class="curcle">
+			<div class="smallcu"></div>
+		</div>
+		<div class="ab">派大星的派</div>
+
+		<p class="onep">110<br />收藏</p>
+		<p class="twop">313<br />粉丝</p>
+
+		<ul class="uls">
+			<li class="lis">个人报表
+				<ul>
+					<li class="one">
+						<img src="PSD/images02/6.png">
+					&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件一
+					</li>
+					<li class="one" style="color: #ededf0;">
+						<img src="PSD/images02/11.png">
+					&or;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件二
+						<ol>
+							<li><img src="PSD/images02/7.png">文档1</li>
+							<li><img src="PSD/images02/12.png">文档2</li>
+						</ol>
+					</li>
+					<li class="one">
+						<img src="PSD/images02/6.png">
+					&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件三
+					</li>
+				</ul>
+			</li>
+			<li class="two">个人收藏</li>
+			<li class="three">我的分享</li>
+			<li class="four">图库</li>
+			<li class="five">成长记录</li>
+			<li class="six">账户信息</li>
+		</ul>
+	</div>
+
+
+
+
+	<div class="right">
+		<div class="top">
+			<span>C站</span>
+			<span>/</span>
+			<span>个人报表</span>
+			<span>/</span>
+			<span>文件一</span>
+			<span>/</span>
+			<span class="current">文档一</span>
+		</div>
+
+		<div class="one">
+			<div class="boxone">
+				<p class="pone">
+					查询项
+					<select>
+						<option value="">第一方</option>
+						<option value="">第二方</option>
+						<option value="">第三方</option>
+						<option value="">第四方</option>
+					</select>
+
+					买方
+					<select>
+						<option value="">小莫</option>
+						<option value="">小弟</option>
+						<option value="">王伟</option>
+						<option value="">张三</option>
+					</select>
+
+
+					日期
+					<input type="text" value="2017-8-14">
+
+					总耗时
+					<select>
+						<option value="">8 天</option>
+						<option value="">10 天</option>
+						<option value="">12 天</option>
+						<option value="">100 天</option>
+					</select>
+				</p>
+
+				<p class="ptwo">
+					卖方
+					<select>
+						<option value="">小王</option>
+						<option value="">小李</option>
+						<option value="">章则</option>
+						<option value="">乞丐天下</option>
+					</select>
+
+					人数
+					<select>
+						<option value="">8 人</option>
+						<option value="">10 人</option>
+						<option value="">12 人</option>
+						<option value="">100 人</option>
+					</select>
+
+					成交项
+					<select>
+						<option value="">8 项</option>
+						<option value="">10 项</option>
+						<option value="">12 项</option>
+						<option value="">100 项</option>
+					</select>
+				</p>
+			</div>
+			<a href="javascript:;">搜索</a>
+		</div>
+
+		<div class="two">
+			<div class="dir"><</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="time">
+				<p style="font-size: 12px; color: #323333; margin-bottom: 8px;">02:00pm</p>
+				<p>￥<span style="font-size: 21px; color: #ec6500;">1200</span></p>
+			</div>
+			<div class="dir">></div>
+			<div class="his"><a href="javascript:;">历史查询</a></div>
+		</div>
+
+		<div class="three">
+			<p class="pp">2017年4月份统计</p>
+			<div class="mbox" style="border-left: 3px solid #43b29d;">
+				<p>133311</p>
+				<p>成交量</p>
+				<div style="background-color: #43b29d;"></div>
+			</div>
+			<div class="mbox" style="border-left: 3px solid #388ac1;">
+				<p>133311</p>
+				<p>成交量</p>
+				<div style="background-color: #388ac1;"></div>
+			</div>
+			<div class="mbox" style="border-left: 3px solid #d04b36;">
+				<p>133311</p>
+				<p>成交量</p>
+				<div style="background-color: #d04b36;"></div>
+			</div>
+			<div class="mbox tes" style="border-left: 3px solid #e2cd47;">
+				<p>133311</p>
+				<p>成交量</p>
+				<div style="background-color: #e2cd47;"></div>
+			</div>
+		</div>
+
+		<div class="four">
+			<div class="leftbox">
+				<p class="pone">第一组项目</p>
+				<div class="onbox">
+					<ul>
+						<li class="current">项目一</li>
+						<li>项目一</li>
+						<li>项目一</li>
+						<li>项目一</li>
+						<li>项目一</li>
+					</ul>
+					<table>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+						<tr>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+							<td>购买材料4</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="rightbox">
+				<p class="pone" style="margin-bottom: 15px;">第一组项目</p>
+				<p class="ptwo" style="font-size: 12px; color: #c3c2c2;">标题</p>
+				<p class="ptwo" style="font-size: 12px; color: #535353; margin-bottom: 9px;">项目报表3</p>
+				<p class="pthree">
+					<span style="font-size: 12px; color: #c3c2c2;">价格</span><br />
+					<span style="font-size: 12px; color: #535353;">￥158</span>
+				</p>
+
+				<p class="pfour" style="border-left: 1px solid #ddd; position: relative;">
+					<span style="font-size: 12px; color: #c3c2c2;">负责人</span><br />
+					<span style="font-size: 12px; color: #535353;">小莫</span>
+					<span class="sp"></span>
+				</p><br /><br/><br/>
+
+				<p class="pfive">
+					<span class=".ss" style="color: #c3c2c2; font-size: 12px;">详细描述</span><br />
+					<span class=".ss" style="color: #535353; font-size: 12px;">该项目目前负责人是...</span>
+				</p>
+
+				<p class="psix">
+					<input type="checkbox">遵守保密协议
+					<a href="javascript:;">搜索</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="five">
+			<div class="rightbox">
+				<p class="pone">日历</p>
+				<div class="sel">
+					<select class="one">
+						<option value="2016年">2016年</option>
+						<option value="2017年">2017年</option>
+						<option value="2018年">2018年</option>
+					</select>
+					<select class="two">
+						<option value="4月">4月</option>
+						<option value="5月">5月</option>
+						<option value="6月">6月</option>
+					</select>
+					<select class="three">
+						<option value="标注日期">标注日期</option>
+						<option value="标注日期">标注日期</option>
+						<option value="标注日期">标注日期</option>
+					</select>
+					<a href="javascript:;">返回今天</a>
+				</div>
+
+				<table>
+					<thead>
+						<tr>
+							<td>一<p></p></td>
+							<td>二<p></p></td>
+							<td>三<p></p></td>
+							<td>四<p></p></td>
+							<td>五<p></p></td>
+							<td>六<p></p></td>
+							<td>日</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<p></p>
+								<p></p>
+							</td>
+							<td>
+								<p></p>
+								<p></p>
+							</td>
+							<td>
+								<p></p>
+								<p></p>
+							</td>
+							<td>
+								<p></p>
+								<p></p>
+							</td>
+							<td>
+								<p>1</p>
+								<p style="color: #db6468">愚人节</p>
+							</td>
+							<td>
+								<p style="color: #db6468">2</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">3</p>
+								<p>甘一</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>4</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>5</p>
+								<p style="color: #db6468">清明</p>
+							</td>
+							<td>
+								<p>6</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>7</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>8</p>
+								<p>甘一</p>
+							</td>
+							<td style="border: 1px solid #f5c62b;">
+								<p style="color: #db6468">9</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">10</p>
+								<p>甘一</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>11</p>
+								<p>甘一</p>
+							</td>
+							<td style="border: 1px solid #f5c62b;">
+								<p>12</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>13</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>14</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>15</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">16</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">17</p>
+								<p>甘一</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>18</p>
+								<p>甘一</p>
+							</td>
+							<td style="border: 1px solid #f5c62b;">
+								<p>19</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>20</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>21</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>22</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">23</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">24</p>
+								<p>甘一</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>25</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>26</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>27</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>28</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p>29</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p style="color: #db6468">30</p>
+								<p>甘一</p>
+							</td>
+							<td>
+								<p></p>
+								<p></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="leftbox">
+				<p class="pone">汽车行业品牌榜</p>
+				<table>
+					<tr>
+						<td class="one" style="font-size: 13px;color: #231815; font-weight: bold">排名</td>
+						<td class="two" style="font-size: 13px;color: #231815; font-weight: bold">品牌</td>
+						<td class="three" style="font-size: 13px;color: #231815; font-weight: bold">搜索指数</td>
+					</tr>
+					<tr class="check">
+						<td class="one">1</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #ec6e51; width: 90%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">2</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #ef804f; width: 80%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">3</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #f19e4f; width: 70%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">4</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 65%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">5</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 60%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">6</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 55%;"></span></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="one">7</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 45%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">8</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 30%;"></span></p>
+						</td>
+					</tr>
+					<tr class="check">
+						<td class="one">9</td>
+						<td class="two">奥迪</td>
+						<td class="three">32617265
+							<p><span style="background-color: #7fcbf0; width: 10%;"></span></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>	
+</body>
+</html>

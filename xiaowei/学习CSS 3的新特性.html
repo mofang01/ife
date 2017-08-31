@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		.box table{
+			margin: 0 auto;
+		}
+
+		table thead:nth-child(2n-1){
+			background-color: #000;
+			color: #fff;
+		}
+
+		table thead:nth-child(2n) tr:nth-child(2n){
+			background-color: #ddd;
+		}
+
+		table thead:nth-child(2n) tr:nth-child(-n+3){
+			color: red;
+		}
+
+		.inbox{
+			width: 100%;
+			text-align: center;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		.inbox input:first-child{
+			width: 120px;
+		}
+
+		.inbox input:last-child{
+			width: 190px;
+			margin-top: 20px;
+		}
+
+		.labox{
+			margin: 0 auto;
+			width: 400px;
+			height: 200px;
+			background-color: green;
+			position: relative;
+		}
+
+		.labox div[id="iconone"]{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.labox div:nth-child(-n+3){
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			background: rgba(255,255,255,0.5);
+			font-size: 18px;
+			position: absolute;
+
+			/*position: absolute;
+			width: 30px;
+			height: 30px;
+			right: 0px;
+			text-align: center;
+			line-height: 30px;
+			display: inline-block;
+			background: rgba(255,255,255,0.5);
+			text-align: center;
+			vertical-align: middle;*/
+
+
+		}
+
+		.labox div[id="icontwo"]{
+			bottom: 0;
+			right: 110px;
+		}
+
+		.labox div[id="iconthree"]{
+			bottom: 0;
+			right: 60px;
+		}
+
+		.labox div[id="iconfour"]{
+			bottom: 0;
+			right: 10px;
+		}
+
+		.labox div a{
+			color: #fff;
+			font-weight: bold;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<table>
+		<thead>
+			<tr>
+				<td>排名</td>
+				<td>网站</td>
+				<td>热度</td>
+			</tr>
+		</thead>
+		<thead>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>百度前端技术学院</td>
+				<td>12000</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>百度前端技术学院</td>
+				<td>10000</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>百度前端技术学院</td>
+				<td>9000</td>
+			</tr>
+		</thead>
+	</table>
+
+	
+	<div class="inbox">
+		<input type="text">
+		<br />
+		<input type="text">
+	</div>
+
+	<div class="labox">
+		<div id="icontwo">
+			<a href="javascript:;">1</a>
+		</div>
+		<div id="iconthree">
+			<a href="javascript:;">2</a>
+		</div>
+		<div id="iconfour">
+			<a href="javascript:;">3</a>
+		</div>
+		<div id="iconone"></div>
+	</div>
+
+</div>
+</body>
+</html>

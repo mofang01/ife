@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 1280px;
+			margin: 0 auto;
+		}
+
+		.inner{
+			width: 1164px;
+			margin: 0 auto;
+		}
+
+		.header{
+			width: 100%;
+			height: 56px;
+		}
+
+		.header .inner{
+			height: 56px;
+			background-image: url("PSD/images01/1.png");
+			background-repeat: no-repeat;
+			background-position: 0 13px;
+		}
+
+		.header p{
+			display: inline-block;
+			width: 70px;
+			height: 56px;
+			line-height: 56px;
+			font-size: 21px;
+			color: #393a3a;
+			margin-left: 42px;
+		}
+
+		.header ul, .header a{
+			float: right;
+		}
+
+		.current{
+			border-bottom: 3px solid #e74f4d;
+		}
+
+		.header ul li{
+			height: 56px;
+			width: 65px;
+			line-height: 55px;
+			text-align: center;
+			float: left;
+			font-size: 14px;
+			list-style-type: none; 
+			margin-right: 45px;
+			box-sizing: border-box;
+			color: #787b83;
+		}
+
+		.header ul li:hover{
+			border-bottom: 3px solid #e74f4d;
+			color: #e74f4d;
+			cursor: pointer;
+		}
+
+		.header a{
+			width: 51px;
+			height: 56px;
+			line-height: 55px;
+			text-align: center;
+			color: #e74f4d;
+			text-decoration: none;
+			box-sizing: border-box;
+			padding-left: 15px;
+			background-image: url("PSD/images01/2.png");
+			background-repeat: no-repeat;
+			background-position: 0 center;
+		}
+
+		.bgimg{
+			width: 100%;
+			height: 690px;
+			background-image: url("PSD/images01/3.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+
+		.bgimg .smallbox{
+			width: 466px;
+			height: 272px;
+			position: absolute;
+			left: 116px;
+			top: 227px;
+		}
+
+		.bgimg .smallbox p{
+			color: #fff;
+		}
+
+		.bgimg .smallbox .one{
+			font-size: 60px;
+		}
+
+		.bgimg .smallbox .two{
+			font-size: 21px;
+		}
+
+		.bgimg .smallbox a{
+			display: block;
+			width: 330px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			font-size: 30px;
+			color: #fff;
+			text-decoration: none;
+			background-color: #e74f4d;
+			margin-top: 62px;
+		}
+
+		.bgimg .smallbox a:hover{
+			background-color: #E73C34;
+		}
+
+		.tubiao{
+			width: 100%;
+			height: 250px;
+		}
+
+		.tubiao div{
+			width: 316px;
+			height: 250px;
+			box-sizing: border-box;
+			padding-top: 130px;
+			float: left;
+		}
+
+		.tubiao div p{
+			width: 100%;
+			height: 50px;
+			color: #888989;
+			font-size: 14px;
+			text-align: center;
+			box-sizing: border-box;
+			border-right: 2px solid #aaa;
+		}
+
+		.tubiao div:nth-child(4) p{
+			border: none;
+		}
+
+		.tubiao .one{
+			background-image: url("PSD/images01/4.png");
+			background-repeat: no-repeat;
+			background-position: 144px 44px;
+		}
+
+		.tubiao .two{
+			background-image: url("PSD/images01/5.png");
+			background-repeat: no-repeat;
+			background-position: 144px 44px;
+		}
+
+		.tubiao .three{
+			background-image: url("PSD/images01/6.png");
+			background-repeat: no-repeat;
+			background-position: 144px 44px;
+		}
+
+		.tubiao .four{
+			background-image: url("PSD/images01/7.png");
+			background-repeat: no-repeat;
+			background-position: 144px 44px;
+		}
+
+		.question{
+			width: 100%;
+			height: 360px;
+			background-color: #edecec;
+			background-image: url("PSD/images01/8.png");
+			background-repeat: no-repeat;
+			background-position: center 90px; 
+			box-sizing: border-box;
+			padding-top: 220px;
+		}
+
+		.question p{
+			width: 100%;
+			color: #8f908f;
+			font-size: 53px;
+			text-align: center;
+		}
+
+		.geologe{
+			width: 100%;
+			height: 340px;
+			background-image: url("PSD/images01/9.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-sizing: border-box;
+			padding: 50px 118px;
+		}
+
+		.geologe .one{
+			width: 100%;
+			height: 35px;
+			color: #fff;
+			font-size: 21px;
+			text-align: center;
+			position: relative;
+		}
+
+		.geologe .one span{
+			display: inline-block;
+			width: 33px;
+			height: 2px;
+			background-color: #fff;
+			position: absolute;
+			bottom: 0;
+			left: 568px;
+		}
+
+		.geologe .two{
+			width: 100%;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			margin-top: 16px;
+		}
+
+		.geologe div{
+			width: 234px;
+			height: 35px;
+			line-height: 35px;
+			border: 1px solid #be4e48;
+			float: left;
+			background-color: #fff;
+			margin-top: 54px;
+			margin-right: 25px;
+			position: relative;
+			padding-left: 12px;
+			box-sizing: border-box;
+			color: #b4b5b5;
+			font-size: 12px;
+			cursor: pointer;
+		}
+
+		.geologe div p{
+			width: 18px;
+			height: 18px;
+			text-align: center;
+			line-height: 16px;
+			color: #fff;
+			background-color: #be4f48;
+			position: absolute;
+			bottom: 7px;
+			right: 9px;
+		}
+
+		.geologe div ul{
+			width: 100%;
+			box-sizing: border-box;
+			border: 1px solid #be4e48;
+			position: absolute;
+			top: 34px;
+			left: 0;
+			display: none;
+		}
+
+		.geologe div ul li{
+			width: 100%;
+			height: 26px;
+			line-height: 26px;
+			list-style-type: none;
+			font-size: 12px;
+			background-color: #e3e3e4;
+			color: #777879;
+			box-sizing: border-box;
+			padding-left: 9px;
+		}
+
+		.geologe div ul li span{
+			visibility: hidden;
+		}
+
+		.geologe div ul li:hover{
+			background-color: #be4e48;
+			color: #fff;
+		}
+
+		.geologe div ul li:hover span{
+			visibility: visible;
+		}
+
+		#xiala:hover ul{
+			display: block;
+		}
+
+		#last{
+			background-color: #be4e48;
+			color: #fff;
+			text-align: center;
+			letter-spacing: 15px;
+		}
+
+		#last:hover{
+			background-color: #BE3C38;
+		}
+
+		.gallery{
+			width: 100%;
+			height: 605px;
+			background-color: #f8f7f7;
+			padding-left: 113px;
+			padding-top: 100px;
+			box-sizing: border-box;
+		}
+
+		.gallery div{
+			width: 220px;
+			height: 392px;
+			float: left;
+			margin-left: 34px;
+		}
+
+		.gallery div p{
+			width: 100%;
+			text-align: center;
+		}
+
+		.gallery .one{
+			background-image: url(PSD/images01/10.png);
+			background-repeat: no-repeat;
+			background-position: left top;
+			box-sizing: border-box;
+			padding-top: 349px;
+		}
+
+		.gallery .two{
+			background-image: url(PSD/images01/11.png);
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			box-sizing: border-box;
+		}
+
+		.gallery .three{
+			background-image: url(PSD/images01/12.png);
+			background-repeat: no-repeat;
+			background-position: left top;
+			box-sizing: border-box;
+			padding-top: 349px;
+		}
+
+		.gallery .four{
+			background-image: url(PSD/images01/13.png);
+			background-repeat: no-repeat;
+			background-position: left top;
+			box-sizing: border-box;
+			padding-top: 349px;
+		}
+
+		.time{
+			width: 100%;
+			height: 566px;
+			position: relative;
+		}
+
+		.time div{
+			float: left;
+		}
+
+		.time .left{
+			width: 850px;
+			height: 566px;
+			background-image: url("PSD/images01/14.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.time .right{
+			width: 430px;
+			height: 566px;
+			box-sizing: border-box;
+			padding-top: 165px;
+			padding-left: 70px;
+			padding-right: 70px;
+		}
+
+		.time .right .ln{
+			text-align: center;
+			font-size: 25px;
+			margin-bottom: 30px;
+		}
+
+		.time .right .ln span{
+			color: #e74f4d;
+		}
+
+		.time .right .en{
+			font-size: 12px;
+			color: #aaa;
+			line-height: 30px;
+		}
+
+		.time a{
+			display: block;
+			width: 105px;
+			height: 32px;
+			text-align: center;
+			line-height: 32px;
+			font-size: 14px;
+			text-decoration: none;
+			color: #e25c60;
+			border: 1px solid #e25c60;
+			margin-left: 90px;
+			margin-top: 50px;
+		}
+
+		.time a:hover{
+			background-color: #e25c60;
+			color: #fff;
+		}
+
+		.time ul li{
+			list-style-type: none;
+			width: 12px;
+			height: 12px;
+			border-radius: 6px;
+			border: 1px solid #929293;
+			float: left;
+			margin-top: 25px;
+			margin-left: 15px;
+		}
+
+		.time ul li:nth-child(1){
+			margin-left: 114px;
+		}
+
+		.time ul li.check{
+			background-color: #929293;
+		}
+
+		.time ul li:hover{
+			background-color: #929293;
+			cursor: pointer;
+		}
+
+		.more{
+			width: 100%;
+			height: 521px;
+		}
+
+		.more div{
+			width: 426px;
+			height: 521px;
+			float: left;
+			box-sizing: border-box;
+			padding-top: 170px;
+		}
+
+		.more div p{
+			text-align: center;
+			font-size: 21px;
+		}
+
+		.more div p.en{
+			margin-top: 8px;
+			margin-bottom: 20px;
+		}
+
+		.more .one .ln{
+			width: 31px;
+			height: 3px;
+			background-color: #fff;
+			margin-left: 196px;
+		}
+
+		.more .one{
+			background-color: #e74f4d;
+			color: #fff;
+		}
+
+		.more .two{
+
+		}
+
+		.more .two .ln{
+			width: 31px;
+			height: 3px;
+			background-color: #abaaaa;
+			margin-left: 196px;
+		}
+
+		.more .three{
+			background-image: url("PSD/images01/15.png");
+		}
+
+		.more div a{
+			display: block;
+			width: 170px;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
+			font-size: 21px;
+			margin-left: 127px;
+			margin-top: 23px;
+		}
+
+		.more .one a{
+			border: 1px solid #fff;
+			text-decoration: none;
+			color: #fff; 
+		}
+
+		.more .one a:hover{
+			background-color: #fff;
+			color: #e74f4d;
+		}
+
+		.more .two a{
+			border: 1px solid #e74f4d;
+			text-decoration: none;
+			color: #e74f4d; 
+		}
+
+		.more .two a:hover{
+			color: #fff;
+			background-color: #e74f4d;
+		}
+
+		.message{
+			width: 100%;
+			height: 752px;
+			box-sizing: border-box;
+			padding-top: 116px;
+		}
+
+		.message p{
+			width: 100%;
+			text-align: center;
+		}
+
+		.message .title{
+			height: 32px;
+			font-size: 21px;
+			color: #323333;
+			line-height: 30px;
+			margin-bottom: 21px;
+			position: relative;
+		}
+
+		.message .title span{
+			display: inline-block;
+			width: 31px;
+			height: 3px;
+			background-color: #ea6563;
+			position: absolute;
+			bottom: -7px;
+			left: 625px;
+		}
+
+		.message .fo{
+			font-size: 12px;
+			line-height: 18px;
+			color: #aaa;
+		}
+
+		.message div{
+			float: left;
+			margin-top: 106px;
+		}
+
+		.message .left{
+			width: 300px;
+			height: 290px;
+			margin-left: 135px;
+			margin-right: 72px;
+		}
+
+		.message .left .head{
+			font-size: 14px;
+			text-align: left;
+			color: #231815;
+			font-weight: bold;
+			margin-bottom: 25px;
+		}
+
+		.message .left .an{
+			font-size: 12px;
+			color: #8c8785;
+			text-align: left;
+		}
+
+		.message .left .cn{
+			font-size: 12px;
+			text-align: right;
+			margin-bottom: 36px;
+		}
+
+		.message .left .teshu{
+			margin-bottom: 18px;
+		}
+
+		.message .left .ts{
+			margin-bottom: 12px;
+		}
+
+		.message .right{
+			height: 290px;
+			width: 646px;
+		}
+
+		.message .right input[type=text]{
+			width: 310px;
+			height: 40px;
+			background-color: #edecee;
+			border: none;
+			margin-bottom: 14px;
+			box-sizing: border-box;
+			padding-left: 15px;
+			font-size: 12px;
+			color: #615957;
+		}
+
+		.message .right .ln{
+			margin-right: 15px;
+		}
+
+		.message textarea{
+			width: 637px;
+			height: 119px;
+			background-color: #edecee;
+			border: none;
+			margin-bottom: 14px;
+			box-sizing: border-box;
+			padding-left: 15px;
+			padding-top: 8px;
+			font-size: 12px;
+			color: #615957;
+		}
+
+		.message input[type=submit]{
+			width: 637px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #edecee;
+			border: none;
+		}
+
+		.last{
+			width: 100%;
+			height: 360px;
+			background-color: #32353e;
+			box-sizing: border-box;
+			padding-top: 86px;
+			color: #fff;
+			background-image: url("PSD/images01/16.png");
+			background-repeat: no-repeat;
+			background-position: 590px 270px;
+		}
+
+		.last p{
+			width: 100%;
+			text-align: center;
+		}
+
+		.last .ln{
+			font-size: 21px;
+			margin-bottom: 10px;
+		}
+
+		.last .en{
+			font-size: 12px;
+			margin-bottom: 6px;
+		} 
+
+		.last .txt{
+			margin-top: 30px;
+		}
+
+		.last p input[type=text]{
+			width: 430px;
+			height: 40px;
+			border: none;
+			box-sizing: border-box;
+			padding-left: 10px;
+			font-size: 14px;
+			color: #aaa;
+		}
+
+		.last p input[type=submit]{
+			width: 80px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #6f7278;
+			border: none;
+			color: #fff;
+		}
+
+		.footer{
+			width: 100%;
+			height: 57px;
+			background-color: #303039;
+		}
+
+		.footer span{
+			display: inline-block;
+			width: 80px;
+			height: 57px;
+			line-height: 57px;
+			color: #fff;
+			font-size: 12px;
+		}
+
+		.footer .ln{
+			margin-left: 98px;
+		}
+
+		.footer .en{
+			margin-left: 1000px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="header">
+			<div class="inner">
+				<p>新世界</p>
+				<a href="javascript:;">登录</a>
+				<ul>
+					<li class="current" style="color: #e74f4d;">首页</li>
+					<li>最新活动</li>
+					<li>项目介绍</li>
+					<li>爱心社区</li>
+					<li>关于我们</li>
+				</ul>
+				
+			</div>
+		</div>
+
+		<div class="bgimg">
+			<div class="smallbox">
+				<p class="one">Time of new life</p>
+				<p class="two" style="margin-top: 29px;">新时代，年轻的人们让我们一起</p>
+				<p class="two">体验新生活，享受新生活</p>
+				<a href="javascript:;">开始体验</a>
+			</div>
+		</div>
+
+		<div class="tubiao">
+			<div class="one"><p>打造全新世界观，让你更<br />爱你的生活</p></div>
+			<div class="two"><p>丰富多彩的公益活动，发<br />挥新世界的主人公意识</p></div>
+			<div class="three"><p>时尚的新理念，超前体验<br />未知的生活</p></div>
+			<div class="four"><p>完善的培养机制，培养你<br />全新的世界观</p></div>
+		</div>
+
+		<div class="question">
+			<p>关于新世界，你不知道的还有什么？</p>
+		</div>
+
+		<div class="geologe">
+			<p class="one">查找新世界城市活动信息<span></span></p>
+			<p class="two">每个城市有不同的活动信息，请自主查询您所需要了解的城市</p>
+			<div>中国<p class="ln">&or;</p></div>
+			<div id="xiala">省份<p class="ln">&or;</p>
+				<ul>
+					<li><span>&radic;</span>&nbsp;&nbsp;北京</li>
+					<li><span>&radic;</span>&nbsp;&nbsp;三都</li>
+					<li><span>&radic;</span>&nbsp;&nbsp;四川</li>
+					<li><span>&radic;</span>&nbsp;&nbsp;上海</li>
+					<li><span>&radic;</span>&nbsp;&nbsp;贵州</li>
+					<li><span>&radic;</span>&nbsp;&nbsp;内蒙古</li>
+				</ul>
+			</div>
+			<div>城市<p class="ln">&or;</p></div>
+			<div id="last">搜索</div>
+		</div>
+
+		<div class="gallery">
+			<div class="one">
+				<p style="font-size: 14px; margin-bottom: 10px;">北京活动</p>
+				<p style="font-size: 12px; color: #888989;">新社区大联盟</p>
+			</div>
+
+			<div class="two">
+				<p style="font-size: 20px;margin-bottom: 5px;letter-spacing: 20px;">上海活动</p>
+				<p style="font-size: 12px; color: #888989;">夜上海新景观探索</p>
+			</div>
+
+			<div class="three">
+				<p style="font-size: 14px; margin-bottom: 10px;">深圳活动</p>
+				<p style="font-size: 12px; color: #888989;">全新海岸线观测点</p>
+			</div>
+
+			<div class="four">
+				<p style="font-size: 14px; margin-bottom: 10px;">香港活动</p>
+				<p style="font-size: 12px; color: #888989;">奢侈消费大放送</p>
+			</div>
+
+		</div>
+
+		<div class="time">
+			<div class="left"></div>
+			<div class="right">
+				<p class="ln">新世界/<span>01</span></p>
+				<p class="en">新世界新世界新世界新世界新世界新世界新世界新世界新世
+					新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界
+					新世界新世界新世界新世界新世界新世界新世界新世界
+				</p>
+				<a href="javascript:;">更多详情</a>
+				<ul>
+					<li class="check"></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="more">
+			<div class="one">
+				<p>新时代</p>
+				<p class="en">关于爱生活的我们</p>
+				<p class="ln"></p>
+				<a href="javascript:;">查看更多</a>
+			</div>
+			<div class="two">
+				<p>新时代</p>
+				<p class="en">关于爱生活的我们</p>
+				<p class="ln"></p>
+				<a href="javascript:;">查看更多</a>
+			</div>
+			<div class="three"></div>
+		</div>
+
+		<div class="message">
+			<p class="title">成为我们的自愿者<span></span></p>
+			<p class="fo">新世界的大家庭需要没一个爱生活的人的加入，如果你够年轻，有梦想，有激情</p>
+			<p class="fo">那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+
+			<div class="left">
+				<p class="head">新世界自愿者协议</p>
+				<p class="an">假如新世界自愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着资源平等的原则......</p>
+				<p class="cn">&radic; more</p>
+				<p class="head">新世界自愿者权利</p>
+				<p class="an">新世界自愿者享受新世界内部所有资源共享的权利，并且享受所在新世界活动的优先参与资格......</p>
+				<p class="cn teshu">&radic; more</p>
+				<p class="head ts">更多条款</p>
+				<p class="cn">&radic; more</p>
+			</div>
+			<div class="right">
+				<input type="text" class="ln" value="姓名 ：">
+				<input type="text" value="年龄 ：">
+				<input type="text" class="ln" value="联系方式 ：">
+				<input type="text" value="联系地址 ：">
+				<textarea>请简单描述您梦想的生活 :</textarea>
+				<input type="submit" value="提交申请"></div>
+			</div>
+		</div>
+
+		<div class="last">
+			<p class="ln">联系我们</p>
+			<p class="en">为了更好获取我们最新产品的资讯，您可以留下您的电子信箱快速订阅我们的产品资讯</p>
+			<p class="en">也可以通过以下任何方式关注我们的动态</p>
+			<p class="txt"><input type="text" value="mofang1006@163.com"><input type="submit" value="提 交"></p>
+		</div>
+
+		<div class="footer">
+			<span class="ln">@2016新世界</span>
+			<span class="en">Back to top</span>
+		</div>
+	</div>
+</body>
+</html>

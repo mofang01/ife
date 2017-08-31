@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.wrap{
+			width: 600px;
+			border: 5px solid #ddd;
+			border-radius: 5px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			font-size: 20px;
+			color: red;
+		}
+
+		.boxone, .boxtwo, .boxthree{
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		p{
+			width: 100%;
+			height: 40px;
+			box-sizing: border-box;
+			padding-left: 120px;
+			margin-top: 40px;
+			font-weight: bold;
+			color: #101010;
+		}
+
+		p input[type="text"]{
+			width: 300px;
+			height: 40px;
+			border: none;
+			border: 1px solid #b7b2b2;
+			border-radius: 5px;
+			outline: none;
+			box-sizing: border-box;
+			padding-left: 10px;
+			font-size: 20px;
+			color: #555;
+		}
+
+		p input[type="text"]:focus{
+			box-shadow: 0 0 5px #23f7ed;
+		}
+
+		p button{
+			float: right;
+			margin-right: 120px;
+			width: 80px;
+			height: 40px;
+			line-height: 40px;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			background-color: #007eff;
+			outline: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button:hover{
+			background-color: #0872de;
+		}
+
+		.xianshi{
+			width: 100%;
+			height: 30px;
+			box-sizing: border-box;
+			padding-left: 177px;
+			margin-top: 5px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="boxone">
+			表单获得焦点时，显示正则规则
+			<p>名称：<input type="text" class="inputone"></p>
+			<div class="xianshi txtone"></div>
+			<p>密码：<input type="text" class="inputone"></p>
+			<div class="xianshi txtone"></div>
+			<p>确认：<input type="text" class="inputone"></p>
+			<div class="xianshi txtone"></div>
+			<p>邮箱：<input type="text" class="inputone"></p>
+			<div class="xianshi txtone"></div>
+			<p>手机：<input type="text" class="inputone"></p>
+			<div class="xianshi txtone"></div>
+			<p><button id="btnone">提交</button></p>
+		</div>
+		<div class="boxtwo">
+			表单失去焦点时，显示验证结果
+			<p>名称：<input type="text" class="inputtwo"></p>
+			<div class="xianshi txttwo"></div>
+			<p>密码：<input type="text" class="inputtwo"></p>
+			<div class="xianshi txttwo"></div>
+			<p>确认：<input type="text" class="inputtwo"></p>
+			<div class="xianshi txttwo"></div>
+			<p>邮箱：<input type="text" class="inputtwo"></p>
+			<div class="xianshi txttwo"></div>
+			<p>手机：<input type="text" class="inputtwo"></p>
+			<div class="xianshi txttwo"></div>
+			<p><button id="btntwo">提交</button></p>
+		</div>
+		<div class="boxthree">
+			点击提交按钮，全局校验，并弹窗显示校验结果
+			<p>名称：<input type="text" class="inputthree"></p>
+			<div class="xianshi txtthree"></div>
+			<p>密码：<input type="text" class="inputthree"></p>
+			<div class="xianshi txtthree"></div>
+			<p>确认：<input type="text" class="inputthree"></p>
+			<div class="xianshi txtthree"></div>
+			<p>邮箱：<input type="text" class="inputthree"></p>
+			<div class="xianshi txtthree"></div>
+			<p>手机：<input type="text" class="inputthree"></p> 
+			<div class="xianshi txtthree"></div>
+			<p><button id="btnthree">提交</button></p>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var inputsone = document.getElementsByClassName("inputone"),
+			txtone = document.getElementsByClassName("txtone"),
+
+			inputstwo = document.getElementsByClassName("inputtwo"),
+			txttwo = document.getElementsByClassName("txttwo"),
+
+			inputsthree = document.getElementsByClassName("inputthree"),
+			txtthree = document.getElementsByClassName("txtthree"),
+			btn = document.getElementById("btnthree");
+
+		//第一个模块的正则
+		inputsone[0].onfocus = function(){
+			txtone[0].innerHTML = "/^[\da-zA-Z_\u4e00-\u9f5a]{4,16}$/";
+			txtone[0].style.display = "block";
+			txtone[0].style.color = "#ddd";
+		}
+
+
+		//密码
+		inputsone[1].onfocus = function(){
+			txtone[1].innerHTML = "/^\w{1,16}$/";
+			txtone[1].style.display = "block";
+			txtone[1].style.color = "#ddd";
+		}
+
+		//密码确认
+		inputsone[2].onfocus = function(){
+			txtone[2].innerHTML = "this == the last";
+			txtone[2].style.display = "block";
+			txtone[2].style.color = "#ddd";
+		}
+
+
+		//邮箱
+		inputsone[3].onfocus = function(){
+			txtone[3].innerHTML = "/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ ";
+			txtone[3].style.display = "block";
+			txtone[3].style.color = "#ddd";
+		}
+
+
+		//手机
+		inputsone[4].onfocus = function(){
+			txtone[4].innerHTML = "/^1[34578]\d{9}$/";
+			txtone[4].style.display = "block";
+			txtone[4].style.color = "#ddd";
+		}
+
+
+
+
+		//第二模块验证正则
+		inputstwo[0].onblur = function(){
+			var str = /^[\da-zA-Z_\u4e00-\u9f5a]{4,16}$/;
+			var txt = inputstwo[0].value;
+			var bool = str.test(txt);
+			if(bool){
+				txttwo[0].innerHTML = "通过!";
+				txttwo[0].style.display = "block";
+				txttwo[0].style.color = "#1ad420";
+			}else{
+				txttwo[0].innerHTML = "请输入正确格式！";
+				txttwo[0].style.display = "block";
+				txttwo[0].style.color = "#de0808";
+			}
+		}
+
+		inputstwo[1].onblur = function(){
+			var str = /^\w{1,16}$/;
+			var txt = inputstwo[1].value;
+			var bool = str.test(txt);
+			if(bool){
+				txttwo[1].innerHTML = "通过!";
+				txttwo[1].style.display = "block";
+				txttwo[1].style.color = "#1ad420";
+			}else{
+				txttwo[1].innerHTML = "请输入正确格式！";
+				txttwo[1].style.display = "block";
+				txttwo[1].style.color = "#de0808";
+			}
+		}
+
+		inputstwo[2].onblur = function(){
+			var check = inputstwo[1].value;
+			var txt = this.value;
+			if(check){
+				if(txt){
+					if(check == txt){
+						txttwo[2].innerHTML = "通过!";
+						txttwo[2].style.display = "block";
+						txttwo[2].style.color = "#1ad420";
+					}else{
+						txttwo[2].innerHTML = "和密码不一致！";
+						txttwo[2].style.display = "block";
+						txttwo[2].style.color = "#de0808";
+					}
+				}else{
+					txttwo[2].innerHTML = "请输入确认密码！";
+					txttwo[2].style.display = "block";
+					txttwo[2].style.color = "#de0808";
+				}
+			}else{
+				txttwo[2].innerHTML = "请输入上一级密码！";
+				txttwo[2].style.display = "block";
+				txttwo[2].style.color = "#de0808";
+			}
+		}
+
+		inputstwo[3].onblur = function(){
+			var str = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+			var txt = inputstwo[3].value;
+			var bool = str.test(txt);
+			if(bool){
+				txttwo[3].innerHTML = "通过!";
+				txttwo[3].style.display = "block";
+				txttwo[3].style.color = "#1ad420";
+			}else{
+				txttwo[3].innerHTML = "请输入正确格式！";
+				txttwo[3].style.display = "block";
+				txttwo[3].style.color = "#de0808";
+			}
+		}
+
+		inputstwo[4].onblur = function(){
+			var str = /^1[34578]\d{9}$/;
+			var txt = inputstwo[4].value;
+			var bool = str.test(txt);
+			if(bool){
+				txttwo[4].innerHTML = "通过!";
+				txttwo[4].style.display = "block";
+				txttwo[4].style.color = "#1ad420";
+			}else{
+				txttwo[4].innerHTML = "请输入正确格式！";
+				txttwo[4].style.display = "block";
+				txttwo[4].style.color = "#de0808";
+			}
+		}
+
+
+
+		btn.onclick = function(){
+			xianshi();
+
+			checklast();
+
+
+		}
+
+		function xianshi(){
+			var strone = /^[\da-zA-Z_\u4e00-\u9f5a]{4,16}$/;
+			var txtone = inputsthree[0].value;
+			var boolone = strone.test(txtone);
+			if(boolone){
+				txtthree[0].innerHTML = "通过!";
+				txtthree[0].style.display = "block";
+				txtthree[0].style.color = "#1ad420";
+				inputsthree[0].style.border = "1px solid #1ad420"
+			}else{
+				txtthree[0].innerHTML = "请输入正确格式！";
+				txtthree[0].style.display = "block";
+				txtthree[0].style.color = "#de0808";
+				inputsthree[0].style.border = "1px solid #de0808"
+			}
+
+
+			var strtwo = /^\w{1,16}$/;
+			var txttwo = inputsthree[1].value;
+			var booltwo = strtwo.test(txttwo);
+			if(booltwo){
+				txtthree[1].innerHTML = "通过!";
+				txtthree[1].style.display = "block";
+				txtthree[1].style.color = "#1ad420";
+				inputsthree[1].style.border = "1px solid #1ad420";
+			}else{
+				txtthree[1].innerHTML = "请输入正确格式！";
+				txtthree[1].style.display = "block";
+				txtthree[1].style.color = "#de0808";
+				inputsthree[1].style.border = "1px solid #de0808";
+			}
+
+
+
+			var check = inputsthree[1].value;
+			var txtth = inputsthree[2].value;
+			if(check){
+				if(txtth){
+					if(check == txtth){
+						txtthree[2].innerHTML = "通过!";
+						txtthree[2].style.display = "block";
+						txtthree[2].style.color = "#1ad420";
+						inputsthree[2].style.border = "1px solid #1ad420";
+					}else{
+						txtthree[2].innerHTML = "和密码不一致！";
+						txtthree[2].style.display = "block";
+						txtthree[2].style.color = "#de0808";
+						inputsthree[2].style.border = "1px solid #de0808";
+					}
+				}else{
+					txtthree[2].innerHTML = "请输入确认密码！";
+					txtthree[2].style.display = "block";
+					txtthree[2].style.color = "#de0808";
+					inputsthree[2].style.border = "1px solid #de0808";
+				}
+			}else{
+				txtthree[2].innerHTML = "请输入上一级密码！";
+				txtthree[2].style.display = "block";
+				txtthree[2].style.color = "#de0808";
+				inputsthree[2].style.border = "1px solid #de0808";
+			}
+
+
+			var strfour = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+			var txtfour = inputsthree[3].value;
+			var boolfour = strfour.test(txtfour);
+			if(boolfour){
+				txtthree[3].innerHTML = "通过!";
+				txtthree[3].style.display = "block";
+				txtthree[3].style.color = "#1ad420";
+				inputsthree[3].style.border = "1px solid #1ad420";
+			}else{
+				txtthree[3].innerHTML = "请输入正确格式！";
+				txtthree[3].style.display = "block";
+				txtthree[3].style.color = "#de0808";
+				inputsthree[3].style.border = "1px solid #de0808";
+			}
+
+
+			var strfive = /^1[34578]\d{9}$/;
+			var txtfive = inputsthree[4].value;
+			var boolfive = strfive.test(txtfive);
+			if(boolfive){
+				txtthree[4].innerHTML = "通过!";
+				txtthree[4].style.display = "block";
+				txtthree[4].style.color = "#1ad420";
+				inputsthree[4].style.border = "1px solid #1ad420";
+			}else{
+				txtthree[4].innerHTML = "请输入正确格式！";
+				txtthree[4].style.display = "block";
+				txtthree[4].style.color = "#de0808";
+				inputsthree[4].style.border = "1px solid #de0808";
+			}
+		}
+
+
+		function checklast(){
+			if(txtthree[0].style.color == "rgb(222, 8, 8)"){
+				if(txtthree[1].style.color == "rgb(222, 8, 8)"){
+					if(txtthree[2].style.color == "rgb(222, 8, 8)"){
+						if(txtthree[3].style.color == "rgb(222, 8, 8)"){
+							if(txtthree[4].style.color == "rgb(222, 8, 8)"){
+								alert("输入错误！");
+							}else{
+								alert("输入正确！");
+							}
+						}else{
+							alert("输入正确！");
+						}
+					}else{
+						alert("输入正确！");
+					}
+				}else{
+					alert("输入正确！");
+				}
+			}else{
+				alert("输入正确！");
+			}
+		}
+
+
+	}
+</script>
